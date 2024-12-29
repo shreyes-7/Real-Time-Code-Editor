@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "sans-serif";
+  background: white;
+
+  color: #333;
+}
+
+.join-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background: url("/bg.jpg");
+  background-size: cover;
+}
+
+/* Form container styling */
+.join-form {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+/* Hover effect for the form */
+.join-form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  padding: 3.2rem;
+}
+
+/* Heading style */
+.join-form h1 {
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Input field styling */
+.join-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.join-form input::placeholder {
+  color: #bbb;
+}
+
+/* Focus effect for input */
+.join-form input:focus {
+  border-color: #4a90e2;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Button styling */
+.join-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the button */
+.join-form button:hover {
+  background: linear-gradient(90deg, #764ba2, #667eea);
+  transform: scale(1.05);
+}
+
+/* Active effect for the button */
+.join-form button:active {
+  transform: scale(0.98);
+}
+
+/* Adding subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.join-form {
+  animation: fadeIn 1s ease;
+}
+
+.editor-container {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  /* background: #f5f5f5; */
+
+  .sidebar {
+    width: 250px;
+    padding: 1.5rem;
+    background-color: #1b1f24;
+    color: #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .room-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: #c0c0c0;
+    }
+
+    .copy-button {
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, #0078ff, #00c8ff);
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .copy-success {
+      margin-left: 0.5rem;
+      color: #00c8ff;
+      font-size: 0.8rem;
+    }
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      background: #2a2f36;
+      margin-top: 5px;
+      border-radius: 5px;
+      color: #e5e5e5;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #3a3f46;
+      }
+    }
+  }
+
+  .typing-indicator {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #a0a0a0;
+  }
+
+  .language-selector {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #24292f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #3c4045;
+      transform: translateY(-2px);
+    }
+  }
+
+  .leave-button {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #ff3e3e, #d82626);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .editor-wrapper {
+    flex-grow: 1;
+    background-color: #fff;
+  }
+}
